@@ -1,4 +1,4 @@
-function loadEvent(){
+/* function loadEvent(){
     const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
 
     const cities = [];
@@ -46,4 +46,71 @@ function loadEvent(){
 
 
 }
-window.addEventListener("load", loadEvent)
+window.addEventListener("load", loadEvent) */
+
+/* const shopData=[{
+  name: "laptop",
+  price: 5000,
+  piece: 6
+},
+{
+  name: "watch",
+  price: 2000,
+  piece:2
+},
+{
+  name: "tabelt",
+  price: 3500,
+  piece: 6,
+}
+]
+
+const money=shopData.map(nameAndPrice)
+ 
+
+function nameAndPrice(name){
+  return name.price*name.piece
+}
+
+console.log(money) */
+
+/* let str= "https://codecool.com "
+ let b=str.slice(8,-5)
+let c= b.charAt(0).toUpperCase() + b.slice(1);
+
+console.log(c) */
+
+const user1 = {
+  id: 3242342,
+  username: "belakovacs12",
+  email: "bela@gmail.com",
+  phone: "701231231",
+  isConfirmed: true
+}
+
+const user2 = {
+  id: 2136523,
+  username: "lajosnagy",
+  email: "lajos@gmail.com",
+  phone: "303214321",
+  isConfirmed: true
+}
+
+const user3 = {
+  id: 8743534,
+  username: "akarki99",
+  email: "kazmer@gmail.com",
+  phone: "206546547",
+  isConfirmed: false
+}
+
+
+function getUserIdentifiers(user3) {
+  // todo
+  console.log(user3.id)
+ 
+  
+  }
+  
+
+
