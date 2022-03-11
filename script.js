@@ -139,19 +139,24 @@ let list1 = [
 ];
 
 
-      let python=list1.filter(people)
+function getFirstPython(list) {
 
-      function people(value){
-        return value.language === "Python"
-      }
+  let a=list.find(kutya)
+  
+  function kutya(value){
+      return value.language ==="Python"
+  }
 
-      let python1=""
+  return(a? `${a.firstName}, ${a.country}`:"There will be no Python developers")
 
-      for(b of python){
-        python1+=(b.firstName+", "+b.country)
-      }
+ 
+ 
+}
+getFirstPython(list1)
 
-console.log(python1)
+
+
+
 
 
 /* ----------------------------------------feladat határ------------------------- */
@@ -212,3 +217,27 @@ return(b)
 }
 
 isRubyComing(list3)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+var list56 = [
+  { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
+  { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
+  { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
+];
+
+
+function isSameLanguage(list) {
+  // thank you for checking out the Coding Meetup kata :)
+
+let count={}
+
+  list.forEach(item =>{
+    if(count[item.language]){
+      count[item.language]++
+    }else{
+      count[item.language]=1
+    }})
+  
+  }
+console.log(count)
+isSameLanguage(list56)
