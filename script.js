@@ -327,7 +327,7 @@ sortByLanguage(list3456)
 /* ----------------------------------------------Feladat határ-------------------------------------------        */
 
 let listmist= [
-  "abcd", "efgh", "abcde", "fghij", "1234", "56789"
+  "abcd", "efgh", "abcde", "fghij", "1234", "56789", "12345678ö912344", "aaaaaaaaaaaaaabaaaaaaaaaaaaaa"
 ]
 
 function isolateIt(arr){
@@ -340,13 +340,11 @@ function isolateIt(arr){
       let c= value.slice(value.length/2,value.length)
       let v = k +"|"+c
       return v
-    }else if(value.length===5){
-      let i=value.slice(0,2)
-      let j=value.slice(3,5)
+    }else{
+      let i=value.slice(0,value.length/2)
+      let j=value.slice(value.length/2+1,value.length)
       let h=i+"|"+j
       return h
-    }else{
-      return b
     }
 
   }
