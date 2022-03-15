@@ -335,9 +335,9 @@ function isolateIt(arr){
   const b=arr.map(kutya)
 
   function kutya(value){
-    if(value.length===4){
-      let k= value.slice(0,2)
-      let c= value.slice(2,4)
+    if(value.length%2==0){
+      let k= value.slice(0,value.length/2)
+      let c= value.slice(value.length/2,value.length)
       let v = k +"|"+c
       return v
     }else if(value.length===5){
