@@ -221,23 +221,137 @@ isRubyComing(list3)
 /* ----------------------------------------------Feladat határ-------------------------------------------        */
 var list56 = [
   { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
-  { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
+  { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: "JavaScript" },
   { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
 ];
 
 
 function isSameLanguage(list) {
   // thank you for checking out the Coding Meetup kata :)
+let language = list.every(kutya)
 
-let count={}
+function kutya(value){
+  return value.language===list[0].language
+}
 
-  list.forEach(item =>{
-    if(count[item.language]){
-      count[item.language]++
-    }else{
-      count[item.language]=1
-    }})
-  
-  }
-console.log(count)
+
+}
+
+
+
+
 isSameLanguage(list56)
+
+
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+var list34t5 = [
+  { firstName: 'Fatima', lastName: 'A.', country: 'Algeria', continent: 'Africa', age: 25, language: 'JavaScript' },
+  { firstName: 'Agustín', lastName: 'M.', country: 'Chile', continent: 'Americas', age: 37, language: 'C' },
+  { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 39, language: 'Ruby' },
+  { firstName: 'Laia', lastName: 'P.', country: 'Andorra', continent: 'Europe', age: 55, language: 'Ruby' },
+  { firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: "Oceanic", age: 65, language: 'PHP' },
+];
+
+function allContinents(list) {
+  // thank you for checking out the Coding Meetup kata :)
+
+
+/*   let b = list.map(kutya)
+const continent = ["Africa","Americas", "Asia", "Europe", "Oceanic"]
+
+
+
+if(b[0,1,2,3,4]=c[0,1,2,3,4]){
+  console.log(true)
+}else{
+  console.log(false)
+} */
+} 
+
+allContinents(list34t5)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+let beka=[{
+  username: 'David',
+  status: 'online',
+  lastActivity: 10
+}, {
+  username: 'Lucy', 
+  status: 'offline',
+  lastActivity: 22
+}, {
+  username: 'Bob', 
+  status: 'online',
+  lastActivity: 104
+}]
+
+const whosOnline = friends =>
+  friends.reduce((activities, { username, status, lastActivity }) => {
+    const realStatus = status === 'online' && lastActivity > 10 ? 'away' : status
+    return { ...activities, [realStatus]: activities[realStatus] ? [...activities.realStatus, username] : [username] }
+  }, {})
+whosOnline(beka)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+var list3456 = [  
+  { firstName: 'Nikau', lastName: 'R.', country: 'New Zealand', continent: 'Oceania', age: 39, language: 'Ruby' },
+  { firstName: 'Precious', lastName: 'G.', country: 'South Africa', continent: 'Africa', age: 22, language: 'JavaScript' },
+  { firstName: 'Maria', lastName: 'S.', country: 'Peru', continent: 'Americas', age: 30, language: 'C' },
+  { firstName: 'Agustin', lastName: 'V.', country: 'Uruguay', continent: 'Americas', age: 19, language: 'JavaScript' }
+];
+
+function sortByLanguage(list) {
+  // thank you for checking out the Coding Meetup kata :)
+  const ar = list.sort(kutya)
+  
+  function kutya (a, b){
+    const nA = a.language;
+    const nB = b.language;
+  
+    if(nA < nB){
+      return -1;
+    }else if(nA > nB){
+      return 1;
+    }else{
+      return 0;
+    }
+  };
+ return ar
+}
+sortByLanguage(list3456)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+let listmist= [
+  "abcd", "efgh", "abcde", "fghij", "1234", "56789"
+]
+
+function isolateIt(arr){
+  //coding here...
+  const b=arr.map(kutya)
+
+  function kutya(value){
+    if(value.length===4){
+      let k= value.slice(0,2)
+      let c= value.slice(2,4)
+      let v = k +"|"+c
+      return v
+    }else if(value.length===5){
+      let i=value.slice(0,2)
+      let j=value.slice(3,5)
+      let h=i+"|"+j
+      return h
+    }else{
+      return b
+    }
+
+  }
+
+  console.log(b)
+}
+
+isolateIt(listmist)
