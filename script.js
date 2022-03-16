@@ -256,19 +256,17 @@ var list34t5 = [
 
 function allContinents(list) {
   // thank you for checking out the Coding Meetup kata :)
-
-
-/*   let b = list.map(kutya)
-const continent = ["Africa","Americas", "Asia", "Europe", "Oceanic"]
+  let b = list.map(kutya)
+  const continent = ["Africa","Americas", "Asia", "Europe", "Oceanic"]
 
 
 
-if(b[0,1,2,3,4]=c[0,1,2,3,4]){
-  console.log(true)
-}else{
-  console.log(false)
-} */
-} 
+  if(b[0,1,2,3,4]=c[0,1,2,3,4]){
+    return true
+  }else{
+    return false
+  } 
+}  
 
 allContinents(list34t5)
 
@@ -306,28 +304,41 @@ var list3456 = [
 
 function sortByLanguage(list) {
   // thank you for checking out the Coding Meetup kata :)
+
+  const ar2= list.sort(cica)
+  function cica(a,b){
+    if(a.firstName<b.firstName){
+      return -1
+    }else if(a.firstName>b){
+      return 1
+    }else{
+      return 0
+    }
+  }
+
+
+  
+
   const ar = list.sort(kutya)
-  
   function kutya (a, b){
-    const nA = a.language;
-    const nB = b.language;
   
-    if(nA < nB){
+    if(a.language < b.language){
       return -1;
-    }else if(nA > nB){
+    }else if(a.language > b.language){
       return 1;
     }else{
-      return 0;
+      return ar2;
     }
   };
- return ar
+  return ar
+ 
 }
 sortByLanguage(list3456)
 
 /* ----------------------------------------------Feladat határ-------------------------------------------        */
 
 let listmist= [
-  "abcd", "efgh", "abcde", "fghij", "1234", "56789", "12345678ö912344", "aaaaaaaaaaaaaabaaaaaaaaaaaaaa"
+  "abcd", "efgh", "abcde", "fghij", "1234", "56789", "12345678ö912344", "aaaaaaaaaaaaaa-aaaaaaaaaaaaaa"
 ]
 
 function isolateIt(arr){
@@ -349,7 +360,31 @@ function isolateIt(arr){
 
   }
 
-  console.log(b)
+  return b
 }
 
 isolateIt(listmist)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+const listwde=[1,1,1,2,2,3]
+const listkres=[1,1,1,2,2,2,3,3,3]
+const hreus=[1,2,3,4,4,5,5,6,6]
+
+function sortIt(arr){
+  //coding here...
+  
+  
+  let b=arr.sort(kutya)
+
+  function kutya(a,b){
+    if(a<b){
+   return -1
+    }if(a>b){
+      return 1
+    }return 0
+  }
+/* console.log(b) */
+  
+}
+
+sortIt(hreus)
