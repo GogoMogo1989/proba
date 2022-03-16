@@ -389,3 +389,85 @@ function sortIt(arr){
 }
 
 sortIt(hreus)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+const v = [1, 3, 4, 15, 16, 23, 45.5, 49.3]
+
+
+function simplifyNumber(n) {
+  
+  
+ /*  if(n<0){
+    console.log(0)
+  }else if(n>10){
+    console.log("sok")
+  }else{
+    console.log(Math.round(n))
+  }  */
+} 
+
+
+simplifyNumber()
+
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+let k="Éld át az élményt"
+
+
+function amplifyBs(n) {
+
+  let times=5
+  let k="!"
+  let c= n+k
+for (let index = 0; index <=5; index++) {
+   /*  console.log( n+"!") */
+  
+}
+
+ 
+}
+amplifyBs(k)
+
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+let kuka={
+    "id": 1,
+    "username": "Kovacs Bela",
+    "mostRecentPurchase": {
+      "category": "shoes",
+      "color": "blue",
+      "price": 300
+    },
+  }
+
+
+let cica={
+    "category": "accessory",
+    "color": "red",
+    "price": 100
+  }
+
+
+function isGoodRecommendation(user, product) {
+
+  let k={customerName: user.username,
+         productColor: product.color,
+         isProductRecommended:true}
+        
+  let b={customerName: user.username,
+          productColor: product.color,
+          isProductRecommended:false}
+  //todo
+if(user.mostRecentPurchase.category !==product.category && user.mostRecentPurchase.color === product.color && user.mostRecentPurchase.price > product.price){
+  console.log(k)
+}else{
+  console.log(b)
+}
+
+
+
+
+}
+isGoodRecommendation(kuka, cica)
