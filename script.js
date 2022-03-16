@@ -181,6 +181,7 @@ function senior(list){
       }
 
   }
+  
 
   let beka = list.filter(milter)
 
@@ -190,11 +191,11 @@ function senior(list){
 
   }
 
-  /* console.log(beka) */
+  return beka
 
 }
 
-/* senior(list2) */
+senior(list2)
 
 
 /* --------------------------------------következő feladat------------------------------------------- */
@@ -213,7 +214,7 @@ function isRubyComing(list) {
   function kutya(value){
     return value.language ==="Ruby"
   }
-return(b)
+return b
 }
 
 isRubyComing(list3)
@@ -234,7 +235,7 @@ function kutya(value){
   return value.language===list[0].language
 }
 
-
+return language
 }
 
 
@@ -268,7 +269,7 @@ function allContinents(list) {
   } 
 }  
 
-allContinents(list34t5)
+/* allContinents(list34t5) */
 
 /* ----------------------------------------------Feladat határ-------------------------------------------        */
 
