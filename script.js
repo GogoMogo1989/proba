@@ -543,7 +543,7 @@ function toCamelCase(str){
     const str2 = arr.join(" "); // Itt tesszük egy stringgé őket
     const str3=str2.replace( /\s/g,'') //itt törölkük ki a space-ket
 
-    console.log(str3)
+    return str3
 
   }else{
 
@@ -560,10 +560,94 @@ function toCamelCase(str){
     const str4 = arr2.join(" ");
     const str5=str4.replace( /\s/g,'')
 
-    console.log(str5)
+    return str5
       
   }
 
 }
 
 toCamelCase(c)
+
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+let bubika= 23456
+
+
+function digital_root(n) {
+  // ...
+    let digits = n.toString().split(''); //Itt a számot, külön darabja vágja, és stringgé alakítja egy tömben
+    let realDigits = digits.map(Number)  //Itt a stringé alakított számokat vissza koncertálja number-ré
+
+
+    let sum= 0 
+    
+    for(var i=0; i < realDigits.length; i++){
+
+    sum += realDigits[i]; //Itt tölti fel a sum nevű változót, úgy hogy egy for függvényen keresztül, összeadja a meglévő számokat.
+    }
+
+
+    let digits2 = sum.toString().split('');
+    let realDigits2 = digits2.map(Number)
+
+    let sum2= 0
+    
+    for(var i=0; i < realDigits2.length; i++){
+
+    sum2 += realDigits2[i];
+    }
+
+    let digits3 = sum2.toString().split('');
+    let realDigits3 = digits3.map(Number)
+
+    let sum3= 0
+    
+    for(var i=0; i < realDigits3.length; i++){
+
+    sum3 += realDigits3[i];
+    }
+    
+    return sum3
+  
+}
+  
+
+digital_root(bubika)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+let kukas= "Indivisibility"
+let kukas2= "Indivisibilities"
+
+function duplicateCount(text){
+  //...
+  let newArray = text.toString().split('');
+
+  let count={}
+
+  newArray.forEach(item =>{
+    if(count[item]){
+      count[item]++
+    }else{
+      count[item]=1
+    }
+    return item
+  })
+
+let ki= Object.values(count)
+
+for(let b of ki){
+  if(b>1){
+    console.log(1)
+  }else if(b>=2){
+    console.log(2)
+  }else{
+    console.log(0)
+  }
+}
+
+
+
+}
+
+duplicateCount(kukas)
