@@ -625,6 +625,7 @@ function duplicateCount(text){
 
   let count={}
 
+
   newArray.forEach(item =>{
     if(count[item]){
       count[item]++
@@ -636,15 +637,27 @@ function duplicateCount(text){
 
 let ki= Object.values(count)
 
+let k=[]
+
+
 for(let b of ki){
-  if(b>1){
-    console.log(1)
-  }else if(b>=2){
-    console.log(2)
-  }else{
-    console.log(0)
+  k+=b
+}
+let newArray2 = k.toString().split('');
+
+for(let huha of newArray2){
+  if(huha==0){
+    console.log("azta")
+  }else if(huha==1){
+    console.log("betyár")
+  }else if(huha==2){
+    console.log("mindenit")
   }
 }
+
+
+
+
 
 
 
