@@ -460,14 +460,110 @@ function isGoodRecommendation(user, product) {
           productColor: product.color,
           isProductRecommended:false}
   //todo
-if(user.mostRecentPurchase.category !==product.category && user.mostRecentPurchase.color === product.color && user.mostRecentPurchase.price > product.price){
-  console.log(k)
-}else{
-  console.log(b)
-}
-
-
-
+  if(user.mostRecentPurchase.category !==product.category && user.mostRecentPurchase.color === product.color && user.mostRecentPurchase.price > product.price){
+    return k
+  }else{
+  return b
+  }
 
 }
+
 isGoodRecommendation(kuka, cica)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+let list123456 =[/* "Jacob", "Alex","Barbara", "Sara" */]
+
+function likes(names) {
+  // TODO
+  const newList=names.map(kutya)
+
+  function kutya(value){
+    return value
+  }
+
+  if(newList.length===0){
+    return "no one like this"
+  }
+  else if(newList.length===1){
+    return`${newList[0]} likes this`
+  }else if(newList.length===2){
+    return`${newList[0]} and ${newList[1]} like this`
+  }else if(newList.length===3){
+    return`${newList[0]}, ${newList[1]} and ${newList[2]} like this`
+  }else{
+    return`${newList[0]}, ${newList[1]} and ${newList.length-2} others like this`
+  }
+
+}
+
+likes(list123456)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+let createPhoneNumber1234=[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+function createPhoneNumber(numbers){
+  
+  const monkey=numbers.map(kutya)
+
+  function kutya(value){
+    return value
+  }
+
+  let c=`(${monkey[0]}${monkey[1]}${monkey[2]}) ${monkey[3]}${monkey[4]}${monkey[5]}-${monkey[6]}${monkey[7]}${monkey[8]}${monkey[9]}`
+
+ return String(c)
+
+}
+
+createPhoneNumber(createPhoneNumber1234)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+let b="the-stealth-warrior"
+let c="the_stealth_warrior"
+let d="A-B-C"
+let e=""
+
+function toCamelCase(str){
+
+  if(str.includes("_")){
+
+    const firstToUC = str.replace(/_/g,' ') //Itt töröljük ki a vonalakat
+    const arr = firstToUC.split(" ");  //Itt rakjuk tömbbe a felosztott szavakat. lásd: https://developer.mozilla.org/   /en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split , és a for ciklussal tesszük nagybetüvé az elős karaktereket
+
+    
+    for (var i = 1; i < arr.length; i++) {
+
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+
+    }
+
+ 
+    const str2 = arr.join(" "); // Itt tesszük egy stringgé őket
+    const str3=str2.replace( /\s/g,'') //itt törölkük ki a space-ket
+
+    console.log(str3)
+
+  }else{
+
+    const firstToUC2 = str.replace(/-/g,' ')
+    const arr2 = firstToUC2.split(" ");
+
+  
+    for (var i = 1; i < arr2.length; i++) {
+  
+      arr2[i] = arr2[i].charAt(0).toUpperCase() + arr2[i].slice(1);
+  
+    }
+    
+    const str4 = arr2.join(" ");
+    const str5=str4.replace( /\s/g,'')
+
+    console.log(str5)
+      
+  }
+
+}
+
+toCamelCase(c)
