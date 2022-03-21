@@ -615,7 +615,7 @@ function digital_root(n) {
 digital_root(bubika)
 
 /* ----------------------------------------------Feladat határ-------------------------------------------        */
-let str="This is another test"
+let str="Seriously this is the last one"
 
 function spinWords(string){
 //TODO Have fun :)
@@ -658,7 +658,7 @@ function spinWords(string){
   }
 
 
-
+  
   let str7 = str6+" "+str5             //Itt rakom össze az új mondatot
 
   let str8=str7.replace(/[","]/g," ")  //Itt törlöm ki a vesszőket
