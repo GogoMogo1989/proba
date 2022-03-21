@@ -619,56 +619,114 @@ let str="Seriously this is the last one"
 
 function spinWords(string){
 //TODO Have fun :)
-  let str2 = string.split(" ")  //Itt választom szét a szavakat külön-külön
 
+
+
+let str2 = string.split(" ")  //Itt választom szét a szavakat külön-külön
+let b=""
   let str3 = str2.map(kutya)  //Itt szűröm ki, és fordítom meg az 5-nél nagyobb, vagy egyenlő hosszúságú szavakat.
-  let str4= str2.map(cica)  //Itt szűröm ki a 4-nél kissebb, vagy egyenlő hosszúságú szavakat.
 
 
-  function kutya(value){
+
+  function kutya(value, index){
 
     if(value.length>=5){
-      return value.split("").reverse().join("");
+        str2[index]=value.split("").reverse().join("")
+    }else{
+      str2[index]=value
     }
-
-  }
-
-  function cica(value){
-
-    if(value.length<=4){
-      return value
-    }
-
+   b=str2.join(" ")
   }
 
 
+  console.log(b)
+  return b
 
-  let str5 = str3.filter(macska)  //Itt törlöm ki az "undifend" értékű változókat az str3-ból
+}
 
-  function macska(value){
-    return value !== undefined
-  }
+spinWords(str)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+let x=3021
+
+function fakeNumber(number) {
+  
+  let b= number
+  .toString()  //szöveggé alakítja
+  .replace(/0/g, "X")  //kicserél karaktereket a paraméterek alapján
+  .split("") // szétvágja a szöveget
+  .reverse() //megfordítja a szöveget
+  .join(" ");  // itt újból összerakja
+  
+
+console.log(b)
+return b
 
 
 
-  let str6 = str4.filter(kutytuska) //Itt törlöm ki az "undifend" értékű változókat az str4-ból
-
-  function kutytuska(value){
-    return value !== undefined
-  }
-
+ 
+ 
 
   
-  let str7 = str6+" "+str5             //Itt rakom össze az új mondatot
 
-  let str8=str7.replace(/[","]/g," ")  //Itt törlöm ki a vesszőket
+}
 
+fakeNumber(x)
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
 
-  console.log(str8)
-  return str8
+let cars=[
+  { brand: "Renault", doors: 2, distance: 150000 },
+  { brand: "Opel", doors: 4, distance: 25000 },
+  { brand: "BMW", doors: 2, distance: 75000 },
+]
+
+const sumOfKmsBySmallBMWs = (cars) => {
+  
+  let c =0
+
+  for(const b of cars){
+    if(b.brand === "BMW" && b.doors === 2){
+      c += b.distance
+    }else{
+      c += 0
+    } 
+  }
+ 
+return c
+ 
 
 
 
 }
 
-spinWords(str)
+sumOfKmsBySmallBMWs(cars)
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+let movies=[
+  { title: "Titanic", genre: "drama", originalLanguage: "english", length: 180 },
+  { title: "Shaun of the dead", genre: "comedy", originalLanguage: "english", length: 120 },
+  { title: "Star Wars", genre: "scifi", originalLanguage: "english", length: 150 },
+]
+
+
+const getLongestEnglishComedy = (movies) => {
+
+/* let c=""
+  
+for(let b of movies){
+  if(b.genre==="comedy" && b.originalLanguage === "english"){
+    c+=b.title
+  }else{
+    return null
+  }
+}
+
+
+console.log(c) */
+
+
+
+}
+
+getLongestEnglishComedy(movies)
