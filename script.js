@@ -615,3 +615,60 @@ function digital_root(n) {
 digital_root(bubika)
 
 /* ----------------------------------------------Feladat határ-------------------------------------------        */
+let str="This is another test"
+
+function spinWords(string){
+//TODO Have fun :)
+  let str2 = string.split(" ")  //Itt választom szét a szavakat külön-külön
+
+  let str3 = str2.map(kutya)  //Itt szűröm ki, és fordítom meg az 5-nél nagyobb, vagy egyenlő hosszúságú szavakat.
+  let str4= str2.map(cica)  //Itt szűröm ki a 4-nél kissebb, vagy egyenlő hosszúságú szavakat.
+
+
+  function kutya(value){
+
+    if(value.length>=5){
+      return value.split("").reverse().join("");
+    }
+
+  }
+
+  function cica(value){
+
+    if(value.length<=4){
+      return value
+    }
+
+  }
+
+
+
+  let str5 = str3.filter(macska)  //Itt törlöm ki az "undifend" értékű változókat az str3-ból
+
+  function macska(value){
+    return value !== undefined
+  }
+
+
+
+  let str6 = str4.filter(kutytuska) //Itt törlöm ki az "undifend" értékű változókat az str4-ból
+
+  function kutytuska(value){
+    return value !== undefined
+  }
+
+
+
+  let str7 = str6+" "+str5             //Itt rakom össze az új mondatot
+
+  let str8=str7.replace(/[","]/g," ")  //Itt törlöm ki a vesszőket
+
+
+  console.log(str8)
+  return str8
+
+
+
+}
+
+spinWords(str)
