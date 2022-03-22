@@ -639,7 +639,7 @@ let b=""
   }
 
 
-  console.log(b)
+
   return b
 
 }
@@ -660,7 +660,7 @@ function fakeNumber(number) {
   .join(" ");  // itt újból összerakja
   
 
-console.log(b)
+
 return b
 
 
@@ -706,27 +706,33 @@ sumOfKmsBySmallBMWs(cars)
 let movies=[
   { title: "Titanic", genre: "drama", originalLanguage: "english", length: 180 },
   { title: "Shaun of the dead", genre: "comedy", originalLanguage: "english", length: 120 },
-  { title: "Star Wars", genre: "scifi", originalLanguage: "english", length: 150 },
+  { title: "Star Wars", genre: "comedy", originalLanguage: "english", length: 150 },
 ]
 
 
 const getLongestEnglishComedy = (movies) => {
 
-/* let c=""
+
   
-for(let b of movies){
-  if(b.genre==="comedy" && b.originalLanguage === "english"){
-    c+=b.title
-  }else{
-    return null
-  }
+    const englishComedies = movies.filter((movie) => {
+    return movie.genre === "comedy" && movie.originalLanguage === "english" 
+  }) 
+  
+  const longestEnglishComedy = englishComedies.reduce((prev, curr) => (englishComedies.length === 0) ? null : (prev.length < curr.length) ? curr : prev)
+  
+
+
+console.log(longestEnglishComedy.title)
+  return longestEnglishComedy.title
 }
 
-
-console.log(c) */
-
-
-
-}
 
 getLongestEnglishComedy(movies)
+
+
+/* ----------------------------------------------Feladat határ-------------------------------------------        */
+
+
+
+
+
